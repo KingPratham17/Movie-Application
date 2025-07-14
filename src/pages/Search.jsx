@@ -9,6 +9,7 @@ import './Search.css';
 const Search = () => {
   const [query, setQuery] = useState('');
   const [movies, setMovies] = useState([]);
+  const [filteredMovies, setFilteredMovies] = useState([]);
   const [loading, setLoading] = useState(false);
   const [genres, setGenres] = useState([]);
   const [selectedGenre, setSelectedGenre] = useState('');
@@ -22,8 +23,20 @@ const Search = () => {
   }, []);
 
   useEffect(() => {
+    if (selectedGenre) {
+      const filtered = movies.filter(movie => 
+        movie.genre_ids.includes(Number(selectedGenre))
+      );
+      setFilteredMovies(filtered);
+    } else {
+      setFilteredMovies(movies);
+    }
+  }, [selectedGenre, movies]);
+
+  useEffect(() => {
     if (query.trim() === '') {
       setMovies([]);
+      setFilteredMovies([]);
       return;
     }
 
@@ -31,14 +44,15 @@ const Search = () => {
       setLoading(true);
       try {
         const results = await searchMovies(query);
-        let filteredResults = results;
+        setMovies(results);
         if (selectedGenre) {
-          filteredResults = results.filter(movie => 
+          const filtered = results.filter(movie => 
             movie.genre_ids.includes(Number(selectedGenre))
           );
+          setFilteredMovies(filtered);
+        } else {
+          setFilteredMovies(results);
         }
-        
-        setMovies(filteredResults);
       } catch (error) {
         console.error("Search error:", error);
       } finally {
@@ -51,7 +65,7 @@ const Search = () => {
     }, 500);
 
     return () => clearTimeout(timer);
-  }, [query, selectedGenre]);
+  }, [query]);
 
   return (
     <div className="search-page">
@@ -77,7 +91,7 @@ const Search = () => {
         <LoadingSpinner />
       ) : (
         <MovieGrid 
-          movies={movies} 
+          movies={filteredMovies.length > 0 ? filteredMovies : movies} 
           title={query ? `Results for "${query}"` : "Search for movies"}
         />
       )}

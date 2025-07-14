@@ -12,19 +12,18 @@
 
 .netflix-row-posters {
   display: flex;
-  overflow-x: scroll; /* enables horizontal scrolling */
+  overflow-x: scroll; 
   overflow-y: hidden;
   padding: 0 1rem;
   gap: 1rem;
   scroll-behavior: smooth;
 
-  /* Hide scrollbar visually, still scrollable */
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
 }
 
 .netflix-row-posters::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+  display: none;
 }
 
 .netflix-row-posters::-webkit-scrollbar-thumb {
