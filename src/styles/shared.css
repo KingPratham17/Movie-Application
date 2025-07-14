@@ -1,0 +1,50 @@
+.app {
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.section-title {
+  margin: 20px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+  color: var(--text-color);
+}
+
+.loading-spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.netflix-brand {
+  color: #e50914 !important;
+  font-weight: bold !important;
+  font-size: 1.8rem !important;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.netflix-nav-link {
+  color: var(--text-color) !important;
+  margin-right: 20px !important;
+  font-weight: 500 !important;
+}
+
+.netflix-nav-link:hover {
+  color: #fff !important;
+}
+
+.netflix-home {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+.search-page,
+.favorites-page,
+.movie-details {
+  padding: 2rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}

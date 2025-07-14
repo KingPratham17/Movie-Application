@@ -1,0 +1,27 @@
+.movie-details {
+  padding: 20px;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  margin-top: 70px;
+}
+
+.movie-details .card-img {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.movie-details h1 {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.movie-details p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.movie-details .btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-weight: bold;
+}

@@ -1,0 +1,33 @@
+.netflix-movie-row {
+  background-color: var(--bg-color);
+}
+
+.netflix-row-title {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+
+.netflix-row-posters {
+  display: flex;
+  overflow-x: scroll; /* enables horizontal scrolling */
+  overflow-y: hidden;
+  padding: 0 1rem;
+  gap: 1rem;
+  scroll-behavior: smooth;
+
+  /* Hide scrollbar visually, still scrollable */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+.netflix-row-posters::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.netflix-row-posters::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}

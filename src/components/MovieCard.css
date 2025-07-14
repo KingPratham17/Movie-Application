@@ -1,0 +1,85 @@
+/* Container for each movie card */
+.netflix-movie-card {
+  position: relative;
+  flex: 0 0 auto;
+  width: 180px;
+  margin: 0.5rem;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  background-color: #111;
+}
+
+.netflix-movie-card:hover {
+  transform: scale(1.08);
+  z-index: 5;
+}
+
+/* Movie poster image */
+.netflix-movie-card img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  display: block;
+  border-radius: 4px;
+}
+
+/* Hover overlay effect with gradient */
+.netflix-movie-card-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0.8rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95), transparent);
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.netflix-movie-card:hover .netflix-movie-card-overlay {
+  opacity: 1;
+}
+
+/* Icon styles */
+.netflix-play-icon {
+  font-size: 1.2rem;
+  color: white;
+  margin-right: 0.5rem;
+}
+
+/* Favorite button */
+.netflix-favorite-button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: color 0.2s ease;
+}
+
+.netflix-favorite-button:hover {
+  color: #f34242;
+}
+
+/* Footer text below image */
+.netflix-movie-card-footer {
+  margin-top: 0.5rem;
+  padding: 0 0.3rem;
+}
+
+.netflix-movie-card-footer h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  margin: 0;
+}
+
+.netflix-movie-card-footer p {
+  font-size: 0.8rem;
+  color: #46d369;
+  margin-top: 4px;
+}

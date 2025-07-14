@@ -1,0 +1,13 @@
+.search-page {
+  padding: 20px;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  margin-top: 70px;
+  min-height: calc(100vh - 70px);
+}
+
+
+.search-page h2 {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
