@@ -1,8 +1,5 @@
 # 🎬 Netflix Clone with Theme Toggle
 
-![Demo](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcW5oZ3VzZ2V5Z3B0Y3R5Z3B0Y3R5Z3B0Y3R5Z3B0Y3R5Z3B0Y3R5Z3B0Y3R5Z3B0Y3R5Z3B0Yy/giphy.gif)
-<!-- Replace with actual gif or screenshot of your project demo -->
-
 A **Netflix-inspired** responsive web application built with **React**, featuring:
 - 🌗 Light/Dark Theme Toggle
 - 💾 Theme preference persistence via `localStorage`
