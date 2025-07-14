@@ -5,7 +5,6 @@ A **Netflix-inspired** responsive web application built with **React**, featurin
 - 💾 Theme preference persistence via `localStorage`
 - 📱 Mobile-first responsive UI
 - 🔝 Scroll-reactive fixed Navbar
-
 ---
 
 ## ✨ Features
